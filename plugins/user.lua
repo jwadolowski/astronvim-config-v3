@@ -9,4 +9,9 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "ahmedkhalf/project.nvim",
+    event = "BufRead",
+    config = function() require("project_nvim").setup {} end,
+  },
 }

@@ -6,6 +6,18 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       -- ensure_installed = { "lua_ls" },
+      ensure_installed = {
+        "ansiblels",
+        "cssls",
+        "dockerls",
+        "docker_compose_language_service",
+        "html",
+        -- "nginx-language-server",
+        -- "ruby_ls",
+        "terraformls",
+        "tflint",
+        "vuels"
+      },
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -14,6 +26,13 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = {
+        "ansible-lint",
+        "djlint",
+        "hadolint",
+        "yamllint",
+        "rubocop",
+      },
     },
   },
   {

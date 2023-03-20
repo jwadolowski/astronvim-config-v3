@@ -20,6 +20,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-p>"] = {
+      "<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>",
+      desc = "Find files",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
