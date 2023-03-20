@@ -14,4 +14,8 @@ return {
     event = "BufRead",
     config = function() require("project_nvim").setup {} end,
   },
+  {
+    "towolf/vim-helm",
+    event = "BufRead",
+  }
 }

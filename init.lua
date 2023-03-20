@@ -100,9 +100,9 @@ return {
         [".+/dispatcher%-sdk%-.+/src/.+%.rules"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vars"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vhost"] = "apache",
-        [".+/charts/.+/templates/.+%.yaml"] = "gohtmltmpl",
+        [".+/charts/.+/templates/.+%.yaml"] = "helm",
         [".+/rendered%-manifests/.+/charts/.+/templates/.+%.yaml"] = { "yaml", { priority = 10 } },
-        [".+/charts/.+/templates/.+%.tpl"] = "gohtmltmpl",
+        [".+/charts/.+/templates/.+%.tpl"] = "helm",
         [".+/values%.yaml%.ci%.tpl"] = "yaml",
       },
     }
