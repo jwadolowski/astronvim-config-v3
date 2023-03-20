@@ -100,8 +100,11 @@ return {
         [".+/dispatcher%-sdk%-.+/src/.+%.rules"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vars"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vhost"] = "apache",
+        -- Helm chart templates
         [".+/charts/.+/templates/.+%.yaml"] = "helm",
+        -- overrides with the rule above hence explicit priority
         [".+/rendered%-manifests/.+/charts/.+/templates/.+%.yaml"] = { "yaml", { priority = 10 } },
+        -- Helm chart helpers
         [".+/charts/.+/templates/.+%.tpl"] = "helm",
         [".+/values%.yaml%.ci%.tpl"] = "yaml",
       },
