@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "tokyonight-night",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -31,7 +31,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -80,5 +80,34 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.filetype.add {
+      pattern = {
+        -- Lua does not support regex
+        --
+        -- https://stackoverflow.com/a/2696469/6802186
+        -- https://neovim.io/doc/user/luaref.html#luaref-patterns
+        --
+        -- '-' and '.' are "magic character" hence they have to be escaped
+        [".+/dispatcher/src/.+%.any"] = "apache",
+        [".+/dispatcher/src/.+%.conf"] = "apache",
+        [".+/dispatcher/src/.+%.farm"] = "apache",
+        [".+/dispatcher/src/.+%.rules"] = "apache",
+        [".+/dispatcher/src/.+%.vars"] = "apache",
+        [".+/dispatcher/src/.+%.vhost"] = "apache",
+        [".+/dispatcher%-sdk%-.+/src/.+%.any"] = "apache",
+        [".+/dispatcher%-sdk%-.+/src/.+%.conf"] = "apache",
+        [".+/dispatcher%-sdk%-.+/src/.+%.farm"] = "apache",
+        [".+/dispatcher%-sdk%-.+/src/.+%.rules"] = "apache",
+        [".+/dispatcher%-sdk%-.+/src/.+%.vars"] = "apache",
+        [".+/dispatcher%-sdk%-.+/src/.+%.vhost"] = "apache",
+        -- Helm chart templates
+        [".+/charts/.+/templates/.+%.yaml"] = "helm",
+        -- overrides with the rule above hence explicit priority
+        [".+/rendered%-manifests/.+/charts/.+/templates/.+%.yaml"] = { "yaml", { priority = 10 } },
+        -- Helm chart helpers
+        [".+/charts/.+/templates/.+%.tpl"] = "helm",
+        [".+/values%.yaml%.ci%.tpl"] = "yaml",
+      },
+    }
   end,
 }
