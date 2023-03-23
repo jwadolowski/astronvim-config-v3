@@ -12,10 +12,14 @@ return {
   {
     "ahmedkhalf/project.nvim",
     event = "BufRead",
-    config = function() require("project_nvim").setup {} end,
+    config = function()
+      require("project_nvim").setup {
+        patterns = { ".git" },
+      }
+    end,
   },
   {
     "towolf/vim-helm",
     event = "BufRead",
-  }
+  },
 }
