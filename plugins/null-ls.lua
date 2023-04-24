@@ -16,7 +16,7 @@ return {
         extra_args = { "-i", "2", "-ci" },
       },
       null_ls.builtins.diagnostics.yamllint.with {
-        extra_args = { "-d", "{ extends: relaxed, rules: { line-length: disable } }" },
+        extra_args = { "-d", "{ extends: relaxed, rules: { line-length: disable, brackets: { max-spaces-inside: 1 } } }" },
       },
     }
     return config -- return final config table
