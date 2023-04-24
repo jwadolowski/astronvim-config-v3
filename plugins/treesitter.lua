@@ -18,7 +18,6 @@ return {
       "graphql",
       "hcl",
       "help",
-      "make",
       "proto",
       "regex",
       "rego",
