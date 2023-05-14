@@ -29,5 +29,10 @@ return {
       "vue",
       "yaml",
     },
+    -- YAML indentantion seems to be broken
+    indent = {
+      enable = true,
+      disable = { "yaml" },
+    },
   },
 }
