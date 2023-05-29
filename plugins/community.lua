@@ -11,7 +11,7 @@ return {
   { import = "astrocommunity.color.tint-nvim" },
 
   -- colorscheme
-  { import = "astrocommunity.colorscheme.tokyonight" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
@@ -26,6 +26,8 @@ return {
   -- motion
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
+  -- { import = "astrocommunity.motion.leap-nvim" },
+  -- { import = "astrocommunity.motion.vim-matchup" },
 
   -- pack
   { import = "astrocommunity.pack.bash" },
