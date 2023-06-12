@@ -7,6 +7,7 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    foldlevelstart = 9999, -- do not fold anything on open/save (ref: kevinhwang91/nvim-ufo)
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
