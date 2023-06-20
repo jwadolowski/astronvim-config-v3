@@ -109,5 +109,18 @@ return {
         [".+/values%.yaml%.ci%.tpl"] = "yaml",
       },
     }
+
+    -- Prevent auto-folding
+    --
+    -- Source: https://astronvim.com/Configuration/autocmds#example-autocommand-usage
+    vim.api.nvim_create_augroup("autofolding", { clear = true })
+    vim.api.nvim_create_autocmd("User", {
+      desc = "Disable annoying auto-folding introduced by kevinhwang91/nvim-ufo",
+      pattern = "AstroBufsUpdated",
+      group = "autofolding",
+      callback = function()
+        require('ufo').disable()
+      end
+    })
   end,
 }
