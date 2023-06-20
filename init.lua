@@ -119,7 +119,7 @@ return {
       pattern = "AstroBufsUpdated",
       group = "autofolding",
       callback = function()
-        require('ufo').disable()
+        require('ufo').detach()
       end
     })
   end,
