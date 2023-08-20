@@ -107,6 +107,8 @@ return {
         -- Helm chart helpers
         [".+/charts/.+/templates/.+%.tpl"] = "helm",
         [".+/values%.yaml%.ci%.tpl"] = "yaml",
+        -- https://hurl.dev/
+        [".+%.hurl"] = "hurl"
       },
     }
 
