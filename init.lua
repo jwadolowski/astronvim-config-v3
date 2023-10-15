@@ -105,8 +105,8 @@ return {
         [".+/dispatcher%-sdk%-.+/src/.+%.vars"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vhost"] = "apache",
         -- Helm chart helpers
-        [".+/values%.yaml%.ci%.tpl"] = "helm",
-        [".+/Chart%.yaml%.ci%.tpl"] = "helm",
+        [".+/values%.yaml%.ci%.tpl"] = "yaml",
+        [".+/Chart%.yaml%.ci%.tpl"] = "yaml",
       },
     }
 
