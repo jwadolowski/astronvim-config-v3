@@ -81,6 +81,10 @@ return {
     --   },
     -- }
     vim.filetype.add {
+      extension = {
+        -- https://hurl.dev/
+        hurl = "hurl",
+      },
       pattern = {
         -- Lua does not support regex
         --
@@ -100,15 +104,9 @@ return {
         [".+/dispatcher%-sdk%-.+/src/.+%.rules"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vars"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vhost"] = "apache",
-        -- Helm chart templates
-        [".+/charts/.+/templates/.+%.yaml"] = "helm",
-        -- overrides with the rule above hence explicit priority
-        [".+/rendered%-manifests/.+/charts/.+/templates/.+%.yaml"] = { "yaml", { priority = 10 } },
         -- Helm chart helpers
-        [".+/charts/.+/templates/.+%.tpl"] = "helm",
-        [".+/values%.yaml%.ci%.tpl"] = "yaml",
-        -- https://hurl.dev/
-        [".+%.hurl"] = "hurl"
+        [".+/values%.yaml%.ci%.tpl"] = "helm",
+        [".+/Chart%.yaml%.ci%.tpl"] = "helm",
       },
     }
 
@@ -120,9 +118,7 @@ return {
       desc = "Disable annoying auto-folding introduced by kevinhwang91/nvim-ufo",
       pattern = "AstroBufsUpdated",
       group = "autofolding",
-      callback = function()
-        require('ufo').detach()
-      end
+      callback = function() require("ufo").detach() end,
     })
   end,
 }

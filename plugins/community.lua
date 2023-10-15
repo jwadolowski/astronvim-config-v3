@@ -14,24 +14,27 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   -- diagnostics
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  -- { import = "astrocommunity.diagnostics.trouble-nvim" },
 
   -- editing-support
-  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
+
+  -- git
 
   -- markdown-and-latex
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
 
   -- motion
   { import = "astrocommunity.motion.mini-move" },
-  { import = "astrocommunity.motion.mini-surround" },
+  -- { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.nvim-surround" },
   -- { import = "astrocommunity.motion.leap-nvim" },
   -- { import = "astrocommunity.motion.vim-matchup" },
 
   -- pack
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
