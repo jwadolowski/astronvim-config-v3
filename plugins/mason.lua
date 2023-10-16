@@ -31,7 +31,6 @@ return {
         "djlint",
         "hadolint",
         "yamllint",
-        "rubocop",
       },
     },
   },
