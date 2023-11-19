@@ -20,7 +20,7 @@ return {
     end,
   },
   {
-    "towolf/vim-helm",
-    event = "BufRead",
+    "isobit/vim-caddyfile",
+    event = { "BufRead Caddyfile" },
   },
 }
