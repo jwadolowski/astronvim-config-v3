@@ -105,8 +105,11 @@ return {
         [".+/dispatcher%-sdk%-.+/src/.+%.vars"] = "apache",
         [".+/dispatcher%-sdk%-.+/src/.+%.vhost"] = "apache",
         -- Helm chart helpers
-        [".+/values%.yaml%.ci%.tpl"] = "yaml",
-        [".+/Chart%.yaml%.ci%.tpl"] = "yaml",
+        [".+/.+%.yaml%.ci%.tpl"] = "yaml",
+        -- FIXME: rendered-manifests YAML files are incorrectly recognized as 'helm' file type
+        [".+/rendered%-manifests/.+%.yaml"] = "yaml",
+        -- Caddyfile
+        [".+/Caddyfile"] = "caddyfile",
       },
     }
 
