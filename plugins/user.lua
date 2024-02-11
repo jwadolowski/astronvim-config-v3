@@ -23,4 +23,14 @@ return {
     "isobit/vim-caddyfile",
     event = { "BufRead Caddyfile" },
   },
+  {
+    "pfeiferj/nvim-hurl",
+    event = { "BufRead *.hurl" },
+    config = function()
+      require("hurl").setup {
+        color = true, -- Default: true
+        hurl_flags = {}, -- Default: {}
+      }
+    end
+  },
 }

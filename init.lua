@@ -81,10 +81,7 @@ return {
     --   },
     -- }
     vim.filetype.add {
-      extension = {
-        -- https://hurl.dev/
-        hurl = "hurl",
-      },
+      extension = {},
       pattern = {
         -- Lua does not support regex
         --

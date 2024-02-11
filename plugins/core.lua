@@ -74,4 +74,11 @@ return {
   --     }, { mode = "n", prefix = "<leader>" })
   --   end,
   -- },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      local comment = require "Comment.ft"
+      comment.set("hurl", "#%s")
+    end,
+  },
 }
