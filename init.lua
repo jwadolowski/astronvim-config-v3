@@ -112,11 +112,11 @@ return {
 
     -- Prevent auto-folding
     --
-    -- Source: https://astronvim.com/Configuration/autocmds#example-autocommand-usage
+    -- Source: https://docs.astronvim.com/configuration/autocmds/#example-autocommand-usage
     vim.api.nvim_create_augroup("autofolding", { clear = true })
     vim.api.nvim_create_autocmd("User", {
       desc = "Disable annoying auto-folding introduced by kevinhwang91/nvim-ufo",
-      pattern = "AstroBufsUpdated",
+      pattern = "AstroFile",
       group = "autofolding",
       callback = function() require("ufo").detach() end,
     })
